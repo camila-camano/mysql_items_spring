@@ -12,6 +12,11 @@ public class ItemsController {
     @Autowired
     ItemsService service;
 
+    @GetMapping("/example")
+    public String getMensajesString() {
+        return "Ejemplo de respuesta 8082";
+    }
+
     @GetMapping("/{id}")
     public Items getItem(@PathVariable Long id){
         return service.getItemById(id);
